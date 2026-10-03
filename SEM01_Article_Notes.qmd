@@ -1,0 +1,126 @@
+---
+title: "Article Notes: The Two Step Approach to Structural Equation Modeling"
+author: "Rosarie Maramag"
+date: today
+format:
+  html:
+    toc: true
+    number-sections: true
+    embed-resources: true
+---
+
+# Introduction
+
+-   The article reviews how structural equation modeling (SEM) with latent variables is used in practice and recommends a specific analytic sequence: the two step approach.
+-   SEM combines two kinds of models: a measurement model (how observed indicators relate to latent constructs) and a structural model (how the latent constructs relate to each other).
+-   The authors' central argument is that these two parts should be evaluated separately, measurement first and structure second, so researchers can tell where a problem comes from.
+-   The article also gives practical guidance on estimation, specification, fit assessment, respecification, and interpretation, and warns about common mistakes.
+
+# Background
+
+## Exploratory Versus Confirmatory Analyses
+
+-   Exploratory analysis searches for structure in the data without a firm prior specification; confirmatory analysis tests a structure specified in advance from theory.
+-   SEM is mainly meant to be confirmatory: the researcher specifies the model first and then checks whether the data are consistent with it.
+-   In practice, researchers often revise a model after seeing poor fit, which turns the analysis partly exploratory. The authors treat this as acceptable only if it is acknowledged and handled carefully (see Respecification below).
+-   Revised models should be treated as tentative and ideally checked on new data.
+
+## Complementary Approaches for Theory Testing Versus Predictive Application
+
+-   The article distinguishes two goals: testing a theory (focus on parameter estimates and overall model fit) and prediction (focus on explaining variance in outcomes).
+-   Covariance based SEM is better suited to theory testing, while component or partial least squares approaches are oriented toward prediction.
+-   The authors present these as complementary rather than competing, because they serve different research purposes.
+
+## Estimation Methods
+
+-   Maximum likelihood (ML) and generalized least squares (GLS) are the commonly used estimators; both assume multivariate normality.
+-   Parameter estimates from these methods are fairly robust to moderate violations of normality, but chi square values and standard errors can be affected.
+-   Estimators that make no distributional assumptions exist but need very large samples, which limits their practical use.
+-   Sample size and the number of indicators per construct affect whether the model converges and whether estimates are stable. Larger samples and more indicators per factor reduce estimation problems.
+
+# Confirmatory Measurement Model
+
+-   The measurement model specifies which indicators measure which latent constructs and allows the constructs to be correlated; no structural (causal) paths are specified among them.
+-   It is the foundation for the later structural analysis, so it must be acceptable first.
+
+## Need for Unidimensional Measurement
+
+-   Unidimensional measurement means each set of indicators reflects a single underlying construct, with each indicator loading on only one construct and errors not correlated across indicators.
+-   Without it, a latent construct has no clear meaning, so relationships among constructs cannot be interpreted.
+-   The authors discuss internal consistency (indicators of the same construct agree with each other) and external consistency (indicators relate to indicators of other constructs only through the constructs themselves).
+-   Coefficient alpha alone does not establish unidimensionality; a high alpha can occur even when more than one dimension is present.
+
+## Specification
+
+-   Each latent construct needs a scale. This is done by fixing one loading to 1 or by fixing the construct's variance to 1.
+-   Researchers should plan for enough indicators per construct to identify the model; three or more indicators per construct make the model better behaved.
+-   The measurement model should be specified so that each indicator reflects one construct only, with constructs freely correlated.
+-   Allowing cross-loadings or correlated errors during specification makes it hard to give constructs a clear meaning, so the authors discourage them unless there is strong justification.
+
+## Assessment of Fit
+
+-   **Overall fit:** the chi-square test and other fit indices show how well the model reproduces the observed covariances. Chi square is sensitive to sample size, so incremental fit indices are useful as supplements.
+-   **Component fit:** researchers also look at individual parameters, such as the size and significance of loadings, residuals, and indicator reliabilities.
+-   **Convergent validity:** indicators of the same construct should load significantly on it, showing that they measure the same thing.
+-   **Discriminant validity:** constructs should be empirically distinct. One way to check is whether the correlation between two constructs is meaningfully below 1.0, for example by testing a model that fixes the correlation to 1.0 against one that frees it.
+-   **Improper solutions:** negative error variances or standardized loadings above 1 are warning signs of misspecification or sample problems and should be investigated.
+
+## Respecification
+
+-   When the measurement model fits poorly, the researcher can look at residuals and modification indices to find where the problem is.
+-   Preferred fixes are dropping a problematic indicator or reassigning it to the construct it truly reflects.
+-   Allowing correlated errors is discouraged because it is hard to justify theoretically and can hide a lack of unidimensionality.
+-   Because respecification is driven by the data, it is exploratory. Revised models should be confirmed on an independent sample whenever possible.
+
+# One Step Vs. Two Step Modeling Approaches
+
+## The Confirmatory Structural Model
+
+-   The structural model specifies the hypothesized relationships among latent constructs (which constructs affect which).
+-   It builds on the measurement model: the indicators and loadings stay the same, but the free correlations among constructs are replaced by the theoretical paths.
+-   Because the structural model has fewer free parameters than a measurement model with all constructs correlated, it is a more constrained, nested version of it. This nesting is what makes chi-square difference tests possible.
+
+## Recommended Two Step Modeling Approach
+
+**Step 1: Evaluate the measurement model**
+
+-   Estimate a confirmatory measurement model with all constructs freely correlated and no structural paths.
+-   This shows whether the indicators measure their constructs well (unidimensionality, convergent validity, discriminant validity).
+-   It is done separately so that measurement problems are found and fixed before any structural relationships are interpreted.
+-   If fit is poor, the problem is attributed to measurement, not to the theory, and the researcher respecifies (with the cautions above) before moving on.
+
+**Step 2: Evaluate the structural model**
+
+-   Once measurement is acceptable, estimate the theoretical structural model on top of it.
+-   The structural model tests the hypothesized relationships among constructs. This also contributes to **nomological validity**: do the constructs relate to each other as theory predicts?
+-   The authors describe a set of nested structural models, including the researcher's theoretical model, a more constrained version, a less constrained version, and the measurement model with all constructs correlated. Sequential chi-square difference tests among these show whether the theoretical model is adequate or can be improved. (Check the exact sequence and model labels against the article.)
+
+## Advantages of the Two Step Approach
+
+-   **Locates the source of misfit:** if the measurement model fits but the structural model does not, the problem is in the theory about relationships. If measurement fails, the problem is in the indicators.
+-   **Prevents masking:** in a one step approach, good fit in one part of the model can hide poor fit in another because only overall fit is examined.
+-   **Reduces interpretational confounding:** this occurs when the meaning of a construct (its loadings) shifts depending on the structural model. Estimating the measurement model first fixes the empirical meaning of the constructs, and loadings should stay stable across alternative structural models.
+-   **Supports meaningful model comparison:** tests comparing alternative structural models are cleaner when they all rest on the same, already-evaluated measurement model.
+-   **Gives separate evidence of validity:** convergent and discriminant validity come from Step 1, and nomological validity from Step 2.
+
+## Additional Considerations in Structural Model Interpretation
+
+-   A model that fits well is not proven; it is only not rejected. Other models, including equivalent models, may fit the data equally well.
+-   Causal conclusions need support from theory and research design, not just from good fit, especially with nonexperimental data.
+-   Structural respecification should be guided by theory, not only by modification indices, and should be cross validated.
+-   Researchers should compare their model with plausible alternatives instead of testing only one.
+
+# Conclusion
+
+-   The authors recommend separating SEM into a measurement step and a structural step, evaluating measurement first.
+-   This sequence makes it clearer what is wrong when a model fits poorly, supports validity assessment, protects against interpretational confounding, and allows meaningful comparison of competing models.
+-   They also remind researchers to be cautious about data driven respecification and about causal interpretation.
+
+# References
+
+Anderson, James C., and David W. Gerbing. 1988. "Structural Equation Modeling in Practice: A Review and Recommended Two-Step Approach." *Psychological Bulletin* 103 (3): 411--423. <https://psycnet.apa.org/doiLanding?doi=10.1037%2F0033-2909.103.3.411>
+
+# Appendix
+
+-   [GitHub Repository](https://github.com/your-username/your-repository)
+-   [Published Article Notes on GitHub Pages](https://your-username.github.io/your-repository/)
